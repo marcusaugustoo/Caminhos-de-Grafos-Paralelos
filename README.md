@@ -25,7 +25,7 @@ COMPILAÇÃO DA CRIAÇÃO DE GRAFOS
 ------------------------------------------------------------
 No terminal, dentro da pasta do projeto:
 
-    python 3 gerar_grafo.py <dimensão (n)> <densidade> grafo.txt
+    python3 gerar_grafo.py <dimensão (n)> <densidade> grafo.txt
 
 (DN=1024 refere-se ao tamanho do grafo, ou seja, n.)
 
