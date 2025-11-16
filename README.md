@@ -27,8 +27,6 @@ No terminal, dentro da pasta do projeto:
 
     python3 gerar_grafo.py <dimensão (n)> <densidade> grafo.txt
 
-(DN=1024 refere-se ao tamanho do grafo, ou seja, n.)
-
 ------------------------------------------------------------
 COMPILAÇÃO DO ALGORITMO
 ------------------------------------------------------------
@@ -37,6 +35,7 @@ No terminal, dentro da pasta do projeto:
     nvcc -O2 -arch=sm_89 grafo_floy.cu -o grafo_floy -DN=1024
 
 (Substitua sm_89 conforme sua GPU, por exemplo, sm_75 para RTX 2070.)
+(DN=1024 refere-se ao tamanho do grafo, ou seja, n.)
 
 ------------------------------------------------------------
 EXECUÇÃO
