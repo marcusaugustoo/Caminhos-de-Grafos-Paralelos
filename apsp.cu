@@ -16,7 +16,7 @@ static void checkCuda(cudaError_t result) {
     }
 }
 
-//Kernel: Versão Naive 
+//Kernel
 __global__ void floyd_kernel(const int* d_in, int* d_out, int k, int n) {
     int j = blockIdx.x * blockDim.x + threadIdx.x;
     int i = blockIdx.y * blockDim.y + threadIdx.y;
@@ -30,7 +30,6 @@ __global__ void floyd_kernel(const int* d_in, int* d_out, int k, int n) {
         int dik = d_in[ik_idx];
         int dkj = d_in[kj_idx];
 
-        //Se não há caminho passando por k, mantém o valor atual
         if (dik == INF || dkj == INF) {
             d_out[ij_idx] = dij;
         } else {
