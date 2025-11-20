@@ -21,7 +21,21 @@ REQUISITOS
 - Linux ou WSL2 (Windows Subsystem for Linux)
 
 ------------------------------------------------------------
-COMPILAÇÃO
+EXECUÇÃO SCRIPT GRAFO
+------------------------------------------------------------
+No terminal, dentro da pasta do projeto:
+
+    python3 gerar_grafo.py <N> <Densidade> <arquivo.txt>
+
+(Exemplo: python3 gerar_grafo.py 1024 75 grafo.txt)
+
+Exemplo de saída:
+
+    Gerando grafo 1024x1024 com densidade 50%
+    Arquivo 'grafo.txt' gerado com sucesso.
+
+------------------------------------------------------------
+COMPILAÇÃO APSP
 ------------------------------------------------------------
 No terminal, dentro da pasta do projeto:
 
@@ -30,7 +44,7 @@ No terminal, dentro da pasta do projeto:
 (Substitua sm_86 conforme sua GPU, por exemplo, sm_75 para RTX 2070.)
 
 ------------------------------------------------------------
-EXECUÇÃO
+EXECUÇÃO APSP
 ------------------------------------------------------------
 O programa recebe o nome do arquivo do grafo como argumento:
 
@@ -56,6 +70,7 @@ onde cada valor representa o peso da aresta entre dois vértices.
 Use um valor alto (ex: 9999999) para representar INF (ausência de aresta).
 
 Exemplo (N = 4):
+
     0 5 9999999 10
     9999999 0 3 9999999
     9999999 9999999 0 1
