@@ -106,7 +106,6 @@ int main(int argc, char** argv) {
 
     size_t matrix_size = (size_t)n_arg * n_arg * sizeof(int);
 
-    //Alocação Host
     int* h_dist_cpu = (int*)malloc(matrix_size);
     int* h_dist_in  = (int*)malloc(matrix_size);
     int* h_dist_out = (int*)malloc(matrix_size);
@@ -122,9 +121,7 @@ int main(int argc, char** argv) {
     //Copia entrada para buffer de validação da CPU
     memcpy(h_dist_cpu, h_dist_in, matrix_size);
 
-    // ----------------------------
-    // Execução CPU 
-    // ----------------------------
+    //Execução CPU 
     printf("Executando CPU...\n"); fflush(stdout);
     clock_t cpu_start = clock();
     floyd_cpu(h_dist_cpu, n_arg);
@@ -132,7 +129,7 @@ int main(int argc, char** argv) {
     double cpu_time_s = ((double)(cpu_end - cpu_start) / CLOCKS_PER_SEC);
 
 
-    // Execução GPU
+    //Execução GPU
     printf("Executando GPU...\n"); fflush(stdout);
     
     int *d_in = NULL, *d_out = NULL;
