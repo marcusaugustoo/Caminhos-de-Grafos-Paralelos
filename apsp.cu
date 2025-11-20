@@ -151,7 +151,6 @@ int main(int argc, char** argv) {
         floyd_kernel<<<gridSize, blockSize>>>(d_in, d_out, k, n_arg);
         
         //Troca de ponteiros 
-        //A saída de K vira a entrada de K+1
         int* tmp = d_in; 
         d_in = d_out; 
         d_out = tmp;

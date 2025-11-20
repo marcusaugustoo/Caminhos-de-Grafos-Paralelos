@@ -4,7 +4,7 @@ import random
 def generate_graph(n_size, density_perc, inf_val, output_file):  
     print(f"Gerando grafo {n_size}x{n_size} com densidade {density_perc}%")
     
-    #Probabilidade de NÃO ter uma aresta
+    #Probabilidade de não ter uma aresta
     inf_prob = (100 - density_perc) / 100.0
     
     with open(output_file, 'w') as f:
