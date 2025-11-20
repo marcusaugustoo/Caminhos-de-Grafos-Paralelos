@@ -37,11 +37,16 @@ O programa recebe o nome do arquivo do grafo como argumento:
     ./apsp grafo.txt
 
 Exemplo de saída:
-
-    Sucesso! CPU e GPU produzem o mesmo resultado.
+    
+    Tamanho do Grafo (N): 1024
+    Arquivo de Entrada: grafo.txt
+    Executando CPU...
+    Executando GPU...
+    
+    Resultados da CPU e GPU sao identicos.
     Tempo CPU: 4.432122 s
     Tempo GPU: 0.199180 s
-    Speedup (CPU / GPU total): 22.25x
+    Speedup: 22.25x
 
 ------------------------------------------------------------
 FORMATO DO ARQUIVO DE ENTRADA (grafo.txt)
