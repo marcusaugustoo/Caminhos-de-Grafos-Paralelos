@@ -21,6 +21,7 @@ REQUISITOS
 - Linux ou WSL2 (Windows Subsystem for Linux)
 
 ------------------------------------------------------------
+<<<<<<< HEAD
 COMPILAÇÃO DA CRIAÇÃO DE GRAFOS
 ------------------------------------------------------------
 No terminal, dentro da pasta do projeto:
@@ -36,6 +37,15 @@ No terminal, dentro da pasta do projeto:
 
 (Substitua sm_89 conforme sua GPU, por exemplo, sm_75 para RTX 2070.)
 (DN=1024 refere-se ao tamanho do grafo, ou seja, n.)
+=======
+COMPILAÇÃO
+------------------------------------------------------------
+No terminal, dentro da pasta do projeto:
+
+    nvcc -O2 -arch=sm_86 -o apsp apsp.cu
+
+(Substitua sm_86 conforme sua GPU, por exemplo, sm_75 para RTX 2070.)
+>>>>>>> 9f2ecd6 (feat: atualizando lógica)
 
 ------------------------------------------------------------
 EXECUÇÃO
